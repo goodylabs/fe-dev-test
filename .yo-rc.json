@@ -1,0 +1,9 @@
+{
+  "generator-react-webpack": {
+    "appName": "fe-dev-test",
+    "style": "scss",
+    "cssmodules": false,
+    "postcss": true,
+    "generatedWithVersion": 4
+  }
+}

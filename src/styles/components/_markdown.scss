@@ -1,0 +1,38 @@
+.markdown-text {
+  padding: 30px;
+  background-color: rgba(0,0,0,.03);
+  font-weight: 300;
+
+  ul {
+    margin: 15px 0 30px;
+
+    li {
+      list-style: disc;
+      margin-left: 20px;
+
+      strong {
+        display: block;
+      }
+
+      & + li {
+        margin-top: 5px;
+      }
+    }
+
+    & + h4 {
+      margin-top: -15px;
+    }
+  }
+
+  h2 {
+
+  }
+
+  h3 {
+    font-weight: 700;
+  }
+
+  h4 {
+    font-weight: 500;
+  }
+}

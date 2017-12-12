@@ -1,0 +1,10 @@
+[include]
+.*/src/.*
+
+[libs]
+./interfaces/global.js
+flow-typed
+
+[options]
+module.name_mapper='.*\(.s?css\)' -> 'empty/object'
+suppress_type=$FlowIssue
