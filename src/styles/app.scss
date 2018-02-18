@@ -1,12 +1,14 @@
 @import '~flexboxgrid';
 @import '~reset-css/reset';
 @import '~normalize.css';
+@import '~bootstrap/dist/css/bootstrap.min.css';
 
+@import './base/variables';
 @import './config';
 
 @import './base/globals';
-@import './base/layout';
 @import './base/typo';
+@import './base/layout';
 
 @import './components/page-header';
 @import './components/main-navigation';

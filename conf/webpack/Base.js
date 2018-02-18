@@ -5,6 +5,7 @@
  */
 const fs = require('fs');
 const path = require('path');
+// const ExtractTextPlugin = require('')
 
 const npmBase = path.join(__dirname, '../../node_modules');
 
@@ -106,10 +107,9 @@ class WebpackBaseConfig {
             loader: 'eslint-loader'
           },
           {
-            test: /^.((?!cssmodule).)*\.css$/,
-            loaders: [
-              { loader: 'style-loader' },
-              { loader: 'css-loader' }
+            test:  /\.scss$/,
+            use: [
+              'style-loader', 'css-loader', 'sass-loader'
             ]
           },
           {

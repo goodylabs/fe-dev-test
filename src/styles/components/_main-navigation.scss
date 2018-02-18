@@ -6,17 +6,24 @@
   margin: 15px 0 0 0;
   padding: 0;
   width: 100%;
-
+  font-size: 20px;
   &__item {
     > a {
       display: block;
       color: #000;
       text-decoration: none;
       text-transform: uppercase;
+      &:hover {
+        opacity: 0.7;
+      }
     }
 
     & + .main-navigation__item {
       margin-left: 15px;
+    }
+    &--active {
+      color: $main-color !important;
+      text-decoration: underline !important;
     }
   }
 }
