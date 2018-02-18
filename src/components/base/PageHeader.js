@@ -1,7 +1,7 @@
 // @flow
 import React, { Component } from 'react';
 // import PropTypes from 'prop-types';
-import { Link } from 'react-router';
+import { Link, IndexLink } from 'react-router';
 import { appRoutes } from '../../AppRoutes';
 
 class PageHeader extends Component {
@@ -14,13 +14,16 @@ class PageHeader extends Component {
         </Link>
         <ul className="main-navigation">
           <li className="main-navigation__item">
-            <Link to="/">users</Link>
+            <IndexLink to="/" activeClassName="main-navigation__item--active">home</IndexLink>
           </li>
           <li className="main-navigation__item">
-            <Link to="/">sign up</Link>
+            <Link activeClassName="main-navigation__item--active" to={appRoutes.users}>users</Link>
           </li>
           <li className="main-navigation__item">
-            <Link to={appRoutes.contact}>contact</Link>
+            <Link activeClassName="main-navigation__item--active" to={appRoutes.signup}>sign up</Link>
+          </li>
+          <li className="main-navigation__item">
+            <Link activeClassName="main-navigation__item--active" to={appRoutes.contact}>contact</Link>
           </li>
         </ul>
       </header>

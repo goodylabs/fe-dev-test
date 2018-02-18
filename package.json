@@ -75,6 +75,7 @@
     "webpack-dev-server": "^2.1.0-beta"
   },
   "dependencies": {
+    "bootstrap": "^4.0.0",
     "cross-env": "^3.1.0",
     "flexboxgrid": "^6.3.1",
     "normalize.css": "^7.0.0",
@@ -87,6 +88,7 @@
     "react-router": "3.0.2",
     "react-router-redux": "^4.0.7",
     "redux": "^3.7.2",
+    "redux-form": "^7.2.3",
     "redux-thunk": "^2.2.0",
     "reset-css": "^2.2.1",
     "webpack": "^2.1.0-beta.6"
