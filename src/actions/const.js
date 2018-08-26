@@ -1,3 +1,9 @@
 export const INIT_APP = 'INIT_APP';
-
 export const RESET_STORE = 'RESET_STORE';
+
+export const USERS__GET_USERS = 'USERS__GET_USERS';
+export const USERS__GET_USER_DETAILS = 'USERS__GET_USER_DETAILS';
+export const USERS__CLEAR_USER_DETAILS = 'USERS__CLEAR_USER_DETAILS';
+
+export const SIGNUP__SIGN_UP = 'SIGNUP__SIGN_UP';
+export const SIGNUP__CLEAR_SIGN_UP = 'SIGNUP__CLEAR_SIGN_UP';

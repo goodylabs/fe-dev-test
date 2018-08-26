@@ -9,14 +9,17 @@ import store from './stores';
 import { routes } from './AppRoutes';
 
 const history = syncHistoryWithStore(browserHistory, store);
-
-render(
-  <Provider store={store} warnings={false}>
-    <Router
-      routes={routes(store)}
-      history={history}
-      getState={store.getState} />
-  </Provider>,
-
-  document.getElementById('app')
-);
+const app = document.getElementById('app');
+if (app) {
+  render(
+    <Provider store={store} warnings={false}>
+      <Router
+        routes={routes()}
+        history={history}
+        // $FlowIssue
+        getState={store.getState}
+      />
+    </Provider>,
+    app
+  );
+}

@@ -1,13 +1,23 @@
 {
   "presets": [
-    ["es2015", { "modules": false }],
-    "react",
-    "airbnb"
+    "flow",
+    ["env", {
+      "targets": {
+        "browsers": ["last 2 versions", "safari >= 7"]
+      }
+    }],
+    "stage-0",
+    "react"
   ],
   "plugins": [
     "transform-decorators-legacy",
     "transform-object-rest-spread",
-    "react-hot-loader/babel"
+    "react-hot-loader/babel",
+    "transform-decorators",
+    ["transform-runtime", {
+      "polyfill": false,
+      "regenerator": true
+    }]
   ],
   "env": {
     "test": {

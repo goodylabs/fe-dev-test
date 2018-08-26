@@ -1,0 +1,16 @@
+div.sign-up {
+  &__card {
+    margin-top: 50px;
+    border: 1px solid #f3f3f3;
+    box-shadow: 0 8px 30px 1px #f0f1f2;
+    border-radius: 5px;
+    .ant-card-body {
+      > h1 {
+        margin-bottom: 5px;
+      }
+      > p {
+        opacity: 0.8;
+      }
+    }
+  }
+}

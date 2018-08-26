@@ -95,21 +95,32 @@ class WebpackBaseConfig {
             test: /\.js?$/,
             include: this.srcPathAbsolute,
             loader: 'babel-loader',
-            query: {
-              presets: ['es2015']
-            }
+            // query: {
+            //   presets: ['es2015']
+            // }
           },
           {
             enforce: 'pre',
             test: /\.(js|jsx)$/,
             include: this.srcPathAbsolute,
-            loader: 'eslint-loader'
+            loaders: [
+              { loader: 'babel-loader' },
+              { loader: 'eslint-loader' },
+            ]
           },
           {
             test: /^.((?!cssmodule).)*\.css$/,
             loaders: [
               { loader: 'style-loader' },
-              { loader: 'css-loader' }
+              { loader: 'css-loader' },
+            ]
+          },
+          {
+            test: /^.((?!cssmodule).)*\.scss$/,
+            loaders: [
+              { loader: 'style-loader' },
+              { loader: 'css-loader' },
+              { loader: 'sass-loader' },
             ]
           },
           {

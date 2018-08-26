@@ -11,7 +11,7 @@ const applicationReducer = combineReducers({
   routing: routerReducer,
 });
 
-const rootReducer = (state: Object, action: any) => {
+const rootReducer = (state: Object, action: any): () => void => {
   let s = state;
   if (action.type === RESET_STORE) {
     s = undefined;

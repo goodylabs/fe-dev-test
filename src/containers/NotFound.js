@@ -1,7 +1,10 @@
 // @flow
 import React from 'react';
 
-const NotFound = () => (
+/**
+ * Not found container.
+ */
+const NotFound = (): ?React$Element<any> => (
   <div>:( 404 not found</div>
 );
 

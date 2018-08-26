@@ -8,7 +8,8 @@ import { routerMiddleware } from 'react-router-redux';
 
 import reducers from '../reducers';
 
-function configureStore() {
+
+function configureStore(): ?{} {
   const routeMiddleware = routerMiddleware(browserHistory);
   const middlewares = [thunkMiddleware, routeMiddleware];
   const env = process.env.NODE_ENV;
@@ -21,7 +22,7 @@ function configureStore() {
     reducers,
     applyMiddleware(...middlewares)
   );
-
+  // $FlowIssue
   if (module.hot) {
    // Enable Webpack hot module replacement for reducers
     module.hot.accept('../reducers', () => { // eslint-disable-line

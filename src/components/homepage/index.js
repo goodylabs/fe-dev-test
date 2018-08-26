@@ -2,9 +2,22 @@
 import React, { Component } from 'react';
 import ReactMarkdown from 'react-markdown';
 
-class AppComponent extends Component {
+type AppComponentPropsType = {};
 
-  render() {
+/**
+ * Home page component
+ *
+ * @class AppComponent
+ * @extends {Component<AppComponentPropsType>}
+ */
+class AppComponent extends Component<AppComponentPropsType> {
+  /**
+   *
+   *
+   * @returns {React$Element<any>}
+   * @memberof AppComponent
+   */
+  render(): React$Element<any> {
     const markdown = `### STACK:
       \n---
       \n+ yarn

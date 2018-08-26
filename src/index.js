@@ -6,10 +6,12 @@ import App from './containers/App';
 
 const store = configureStore();
 
-render(
-  <Provider store={store}>
-    <App />
-  </Provider>,
-
-  document.getElementById('app')
-);
+const appElement = document.getElementById('app');
+if (appElement !== null) {
+  render(
+    <Provider store={store}>
+      <App />
+    </Provider>,
+    appElement
+  );
+}
