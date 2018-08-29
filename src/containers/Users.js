@@ -91,12 +91,13 @@ export class Users extends Component<UsersPropsType, UsersStateType> {
         </span>
       ),
     }];
+    const dataSource = users.map((user: Object, x: number): Object => ({ ...user, key: String(x) }));
     return (
       <div>
         <h1>Users</h1>
         <Table
           columns={tableColumns}
-          dataSource={users}
+          dataSource={dataSource}
           loading={loading}
           scroll={{
             x: 500

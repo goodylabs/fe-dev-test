@@ -106,8 +106,8 @@ export class UsersDetails extends Component<UsersDetailsPropsType> {
                   value: userDetails.email,
                 }]}
                 style={{ paddingBottom: 50 }}
-                renderItem={(item: Object): React$Element<any> => (
-                  <List.Item>
+                renderItem={(item: Object, key: number): React$Element<any> => (
+                  <List.Item key={String(key)}>
                     <Divider style={{ margin: '18px 0' }} />
                     <div>
                       <span>{item.title}</span>{' '}

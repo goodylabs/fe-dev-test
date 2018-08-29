@@ -23,7 +23,7 @@ class WebpackDevConfig extends WebpackBaseConfig {
           'process.env.NODE_ENV': '"dev"'
         }),
         new webpack.HotModuleReplacementPlugin(),
-        new webpack.NoErrorsPlugin()
+        new webpack.NoEmitOnErrorsPlugin()
       ]
     };
   }

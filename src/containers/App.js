@@ -70,8 +70,8 @@ class App extends React.Component<AppPropsType> {
         {/* $FlowIssue */}
         <PageHeader />
         <Breadcrumb separator=">">
-          {breadcrumbs.length > 1 ? breadcrumbs.map((breadcrumbItem: Object): React$Element<any> =>
-            <Breadcrumb.Item><Link to={breadcrumbItem.path}>{breadcrumbItem.path === '/' ? <Icon type="home" /> : breadcrumbItem.name}</Link></Breadcrumb.Item>)
+          {breadcrumbs.length > 1 ? breadcrumbs.map((breadcrumbItem: Object, key: number): React$Element<any> =>
+            <Breadcrumb.Item key={String(key)}><Link to={breadcrumbItem.path}>{breadcrumbItem.path === '/' ? <Icon type="home" /> : breadcrumbItem.name}</Link></Breadcrumb.Item>)
           : null}
         </Breadcrumb>
         <div className="page-content">
